@@ -3,9 +3,9 @@
 > **비공식 HA 통합입니다.** 헤이홈(Hejhome) 및 고퀄(GOQUAL)과 관계가 없으며, 공식 지원을 받지 않습니다.
 > Unofficial — not affiliated with or endorsed by Hejhome / GOQUAL.
 
-헤이홈(GoQual)이 공개한 **Open API v3**로 헤이홈 기기를 Home Assistant에 연결하는 커스텀 통합입니다. API는 헤이홈이 제공하는 공식 API지만, 이 통합은 개인이 만든 것입니다. 문제가 생기면 헤이홈 고객센터가 아니라 이 저장소의 이슈로 알려 주세요. 비공식 앱 API를 쓰던 [ha-hejhome](https://github.com/jongho/ha-hejhome)를 대신하려고 만들고 있습니다.
+헤이홈(GoQual)이 공개한 **Open API v3**로 헤이홈 기기를 Home Assistant에 연결하는 커스텀 통합입니다. API는 헤이홈이 제공하는 공식 API지만, 이 통합은 개인이 만든 것입니다. 문제가 생기면 헤이홈 고객센터가 아니라 이 저장소의 이슈로 알려 주세요. 비공식 앱 API를 쓰던 [ha-hejhome](https://github.com/jongho/ha-hejhome)를 대신하려고 만들었습니다.
 
-> 개발 중(0.1.x, 1단계)입니다. 모션 센서·온습도계·컬러 전구로 실제 HA에서 동작을 확인했습니다.
+> 실제 기기로 동작을 확인한 것은 만든 사람이 가진 모션 센서(GKZ-MO021), 온습도계(GKZ-TH141), 스마트 컬러 전구 Z26 세 가지뿐입니다. 다른 기기는 API 문서를 보고 만들었으므로, 동작하지 않으면 이슈로 알려 주세요.
 
 ## 필요한 것
 
@@ -20,7 +20,7 @@
 
 직접 설치하려면 `custom_components/hejhome_openapi/`를 HA의 `/config/custom_components/`에 복사하고 재시작합니다.
 
-## 지원 범위 (1단계)
+## 지원 범위
 
 | 플랫폼 | 능력 |
 |---|---|
