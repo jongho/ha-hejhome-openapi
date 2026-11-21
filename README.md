@@ -5,7 +5,7 @@
 
 헤이홈 기기를 Home Assistant에 연결하는 커스텀 통합입니다. 고퀄(GOQUAL)이 공개한 **Open API v3**를 씁니다. API는 공식이지만 통합은 개인이 만들었으므로, 문제가 생기면 헤이홈 고객센터가 아니라 이 저장소 이슈로 알려 주세요.
 
-예전에 비공식 앱 API로 만든 [ha-hejhome](https://github.com/jongho/ha-hejhome)를 대신합니다.
+헤이홈 for Web(square.hej.so)의 비공식 API로 만든 [ha-hejhome](https://github.com/jongho/ha-hejhome)를 대신합니다. 헤이홈 for Web은 2026년 12월 22일에 서비스를 끝냅니다([공지](https://m.hej.life/board/free/read.html?no=131487&board_no=1)).
 
 > 실제로 시험해 본 기기는 모션 센서(GKZ-MO021), 온습도계(GKZ-TH141), 스마트 컬러 전구 Z26 세 가지입니다. 나머지 기기는 API 문서만 보고 만들었으니, 잘 안 되면 이슈로 알려 주세요.
 
