@@ -1,6 +1,6 @@
 {
   "domain": "hejhome_openapi",
-  "name": "Hejhome Open API",
+  "name": "Hejhome Open API (Unofficial)",
   "codeowners": ["@jongho"],
   "config_flow": true,
   "dependencies": [],
@@ -10,5 +10,5 @@
   "issue_tracker": "https://github.com/jongho/ha-hejhome-openapi/issues",
   "loggers": ["custom_components.hejhome_openapi"],
   "requirements": [],
-  "version": "0.1.1"
+  "version": "0.1.2"
 }
