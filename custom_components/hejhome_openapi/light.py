@@ -183,6 +183,11 @@ class HejhomeLight(HejhomeEntity, LightEntity):
         else:
             target = self.color_mode
 
+        # 밝기를 따로 주지 않고 모드만 바뀌면 지금 보이는 밝기를 그대로 옮긴다.
+        # (모드마다 밝기 값이 따로라, 새 모드에 남아 있던 옛 값으로 튀지 않게)
+        if brightness is None and target is not self.color_mode:
+            brightness = self.brightness
+
         if target is ColorMode.HS and (hs is not None or brightness is not None):
             cur = self._hsv() or {}
             cap = self._color_cap
