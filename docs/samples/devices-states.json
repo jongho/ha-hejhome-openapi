@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "deviceId": "device-1",
+      "reported": [
+        {
+          "reportedAt": "2026-11-20T00:56:54.221+09:00",
+          "onlineStatus": {
+            "online": true
+          }
+        },
+        {
+          "reportedAt": "2026-11-21T07:37:32.780+09:00",
+          "fieldReportedAt": {
+            "percent": "2026-11-21T07:37:32.780+09:00"
+          },
+          "receivedAt": "2026-11-21T07:37:32.943+09:00",
+          "fieldReceivedAt": {
+            "percent": "2026-11-21T07:37:32.943+09:00"
+          },
+          "battery": {
+            "percent": 47
+          }
+        },
+        {
+          "reportedAt": "2026-11-21T05:46:07.813+09:00",
+          "fieldReportedAt": {
+            "detected": "2026-11-21T05:46:07.813+09:00"
+          },
+          "receivedAt": "2026-11-21T05:46:07.928+09:00",
+          "fieldReceivedAt": {
+            "detected": "2026-11-21T05:46:07.928+09:00"
+          },
+          "motionSensor": {
+            "detected": false
+          }
+        }
+      ]
+    },
+    {
+      "deviceId": "device-2",
+      "reported": [
+        {
+          "reportedAt": "2026-11-20T00:56:54.220+09:00",
+          "onlineStatus": {
+            "online": true
+          }
+        },
+        {
+          "reportedAt": "2026-11-21T08:38:37.018+09:00",
+          "fieldReportedAt": {
+            "percent": "2026-11-21T08:38:37.018+09:00"
+          },
+          "receivedAt": "2026-11-21T08:38:37.181+09:00",
+          "fieldReceivedAt": {
+            "percent": "2026-11-21T08:38:37.181+09:00"
+          },
+          "humiditySensor": {
+            "percent": 39.7
+          }
+        },
+        {
+          "reportedAt": "2026-11-21T08:38:36.918+09:00",
+          "fieldReportedAt": {
+            "celsius": "2026-11-21T08:38:36.918+09:00"
+          },
+          "receivedAt": "2026-11-21T08:38:37.070+09:00",
+          "fieldReceivedAt": {
+            "celsius": "2026-11-21T08:38:37.070+09:00"
+          },
+          "temperatureSensor": {
+            "celsius": 20.1
+          }
+        },
+        {
+          "reportedAt": "2026-11-21T07:12:50.742+09:00",
+          "fieldReportedAt": {
+            "percent": "2026-11-21T07:12:50.742+09:00"
+          },
+          "receivedAt": "2026-11-21T07:12:50.921+09:00",
+          "fieldReceivedAt": {
+            "percent": "2026-11-21T07:12:50.921+09:00"
+          },
+          "battery": {
+            "percent": 96
+          }
+        }
+      ]
+    },
+    {
+      "deviceId": "device-3",
+      "reported": [
+        {
+          "reportedAt": "2026-11-20T00:56:54.218+09:00",
+          "onlineStatus": {
+            "online": true
+          }
+        },
+        {
+          "reportedAt": "2026-11-20T12:03:12.687+09:00",
+          "fieldReportedAt": {
+            "on": "2026-11-20T12:03:12.687+09:00"
+          },
+          "receivedAt": "2026-11-20T12:03:12.800+09:00",
+          "fieldReceivedAt": {
+            "on": "2026-11-20T12:03:12.800+09:00"
+          },
+          "onOff": {
+            "on": false
+          }
+        },
+        {
+          "reportedAt": "2026-11-20T12:01:12.874+09:00",
+          "fieldReportedAt": {
+            "kelvin": "2026-11-20T12:01:12.874+09:00"
+          },
+          "receivedAt": "2026-11-20T12:01:12.978+09:00",
+          "fieldReceivedAt": {
+            "kelvin": "2026-11-20T12:01:12.978+09:00"
+          },
+          "colorTemperature": {
+            "kelvin": 3000
+          }
+        }
+      ]
+    }
+  ]
+}

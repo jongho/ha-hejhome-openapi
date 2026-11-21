@@ -1,0 +1,10 @@
+{
+  "items": [
+    {
+      "id": "space-1",
+      "type": "HOME",
+      "name": "우리 집",
+      "linkedAccountId": "account-1"
+    }
+  ]
+}

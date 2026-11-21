@@ -1,0 +1,153 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Hejhome Open API",
+        "description": "Enter the API key issued in the Hejhome partners portal ({portal_url}). Each user needs their own key and must link their own Hejhome account to the application.",
+        "data": {
+          "api_key": "API key"
+        },
+        "data_description": {
+          "api_key": "Shown only once when issued."
+        }
+      },
+      "space": {
+        "title": "Choose a home",
+        "description": "Choose the home to add.",
+        "data": {
+          "space_id": "Home"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Re-enter API key",
+        "description": "The API key for {title} no longer works. Issue a new key in the partners portal ({portal_url}), enter it here, then revoke the old key.",
+        "data": {
+          "api_key": "API key"
+        }
+      },
+      "reconfigure": {
+        "title": "Change API key",
+        "description": "Enter the new API key for {title}. Revoke the old key in the partners portal ({portal_url}) after this succeeds.",
+        "data": {
+          "api_key": "API key"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "The API key is wrong or has been revoked.",
+      "ip_not_allowed": "This IP is not in the application's allowed IP list. Check the allowed IPs in the partners portal.",
+      "organization_inactive": "The organization is not approved or is inactive.",
+      "rate_limited": "Too many requests. Try again later.",
+      "cannot_connect": "Failed to connect to the Hejhome Open API.",
+      "no_linked_account": "No Hejhome account is linked to this application. Link your account in the partners portal first.",
+      "account_unavailable": "The linked Hejhome account is unavailable. Re-link it in the partners portal.",
+      "no_home": "No home owned by the linked account was found.",
+      "wrong_home": "This API key cannot see the configured home.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This home is already configured.",
+      "reauth_successful": "API key updated.",
+      "reconfigure_successful": "API key updated.",
+      "wrong_home": "This API key cannot see the configured home."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Polling",
+        "data": {
+          "scan_interval": "Status polling interval",
+          "device_refresh_hours": "Device list refresh interval"
+        },
+        "data_description": {
+          "scan_interval": "Seconds, 30 to 300. Shorter intervals use more of the API rate limit.",
+          "device_refresh_hours": "Hours. New and removed devices are picked up at this interval."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "charge_state": {
+        "name": "Charging state",
+        "state": {
+          "not_charging": "Not charging",
+          "charging": "Charging",
+          "fully_charged": "Fully charged"
+        }
+      },
+      "filter_life": {
+        "name": "Filter life"
+      },
+      "device_temperature": {
+        "name": "Device temperature"
+      },
+      "actuation_count": {
+        "name": "Actuation count"
+      },
+      "instance": {
+        "name": "{instance}"
+      }
+    },
+    "binary_sensor": {
+      "co_test_in_progress": {
+        "name": "Self-test in progress"
+      },
+      "instance": {
+        "name": "{instance}"
+      }
+    },
+    "switch": {
+      "channel": {
+        "name": "Channel {instance}"
+      },
+      "toggle": {
+        "name": "{instance}"
+      }
+    }
+  },
+  "exceptions": {
+    "invalid_auth": {
+      "message": "The API key is wrong or has been revoked."
+    },
+    "ip_not_allowed": {
+      "message": "This IP is not in the application's allowed IP list. Check the allowed IPs in the partners portal."
+    },
+    "organization_inactive": {
+      "message": "The organization is not approved or is inactive."
+    },
+    "rate_limited": {
+      "message": "Rate limited by the Hejhome Open API; retrying in {seconds} s."
+    },
+    "update_failed": {
+      "message": "Failed to fetch device states: {error}"
+    },
+    "invalid_request": {
+      "message": "The device rejected the request: {error}"
+    },
+    "device_offline": {
+      "message": "The device is offline."
+    },
+    "device_not_ready": {
+      "message": "The device is not ready ({error}). Try again shortly."
+    },
+    "control_failed": {
+      "message": "Failed to control the device: {error}"
+    }
+  },
+  "issues": {
+    "rate_limited": {
+      "title": "Hejhome Open API rate limit reached often",
+      "description": "{title} hit the API rate limit several times in the last hour. Increase the polling interval in the integration options."
+    },
+    "ip_not_allowed": {
+      "title": "Hejhome Open API: IP not allowed",
+      "description": "Requests for {title} are rejected because Home Assistant's public IP is not in the application's allowed IP list. Your public IP may have changed. Update the allowed IPs in the partners portal (https://partners.goqual.com)."
+    },
+    "organization_inactive": {
+      "title": "Hejhome Open API: organization inactive",
+      "description": "Requests for {title} are rejected because the organization is not approved or is inactive. Check the partners portal."
+    }
+  }
+}

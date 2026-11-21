@@ -1,0 +1,153 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "헤이홈 Open API",
+        "description": "헤이홈 파트너스 포털({portal_url})에서 발급받은 API 키를 넣으세요. 사용하는 사람마다 자기 키를 발급받고, 애플리케이션에 본인 헤이홈 계정을 연결해야 합니다.",
+        "data": {
+          "api_key": "API 키"
+        },
+        "data_description": {
+          "api_key": "발급할 때 한 번만 보입니다."
+        }
+      },
+      "space": {
+        "title": "집 선택",
+        "description": "추가할 집을 고르세요.",
+        "data": {
+          "space_id": "집"
+        }
+      },
+      "reauth_confirm": {
+        "title": "API 키 다시 입력",
+        "description": "{title}의 API 키를 더 이상 쓸 수 없습니다. 파트너스 포털({portal_url})에서 새 키를 발급받아 여기에 넣은 뒤 이전 키를 폐기하세요.",
+        "data": {
+          "api_key": "API 키"
+        }
+      },
+      "reconfigure": {
+        "title": "API 키 바꾸기",
+        "description": "{title}에 쓸 새 API 키를 넣으세요. 바꾼 뒤 파트너스 포털({portal_url})에서 이전 키를 폐기하세요.",
+        "data": {
+          "api_key": "API 키"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "API 키가 틀렸거나 폐기됐습니다.",
+      "ip_not_allowed": "이 IP가 애플리케이션 허용 IP 목록에 없습니다. 파트너스 포털에서 허용 IP를 확인하세요.",
+      "organization_inactive": "조직이 아직 승인되지 않았거나 비활성 상태입니다.",
+      "rate_limited": "호출 한도를 넘었습니다. 잠시 뒤 다시 시도하세요.",
+      "cannot_connect": "헤이홈 Open API에 연결하지 못했습니다.",
+      "no_linked_account": "이 애플리케이션에 연결된 헤이홈 계정이 없습니다. 파트너스 포털에서 계정을 먼저 연결하세요.",
+      "account_unavailable": "연결된 헤이홈 계정을 쓸 수 없는 상태입니다. 파트너스 포털에서 다시 연결하세요.",
+      "no_home": "연결한 계정이 소유자인 집이 없습니다.",
+      "wrong_home": "이 API 키로는 설정된 집이 보이지 않습니다.",
+      "unknown": "예상하지 못한 오류가 났습니다."
+    },
+    "abort": {
+      "already_configured": "이미 추가한 집입니다.",
+      "reauth_successful": "API 키를 바꿨습니다.",
+      "reconfigure_successful": "API 키를 바꿨습니다.",
+      "wrong_home": "이 API 키로는 설정된 집이 보이지 않습니다."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "폴링 설정",
+        "data": {
+          "scan_interval": "상태 조회 간격",
+          "device_refresh_hours": "기기 목록 다시 받는 간격"
+        },
+        "data_description": {
+          "scan_interval": "30~300초. 짧을수록 호출 한도를 많이 씁니다.",
+          "device_refresh_hours": "시간 단위. 이 간격으로 새 기기와 없어진 기기를 반영합니다."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "charge_state": {
+        "name": "충전 상태",
+        "state": {
+          "not_charging": "충전 안 함",
+          "charging": "충전 중",
+          "fully_charged": "충전 완료"
+        }
+      },
+      "filter_life": {
+        "name": "필터 수명"
+      },
+      "device_temperature": {
+        "name": "기기 온도"
+      },
+      "actuation_count": {
+        "name": "작동 횟수"
+      },
+      "instance": {
+        "name": "{instance}"
+      }
+    },
+    "binary_sensor": {
+      "co_test_in_progress": {
+        "name": "자가 진단 중"
+      },
+      "instance": {
+        "name": "{instance}"
+      }
+    },
+    "switch": {
+      "channel": {
+        "name": "{instance}구"
+      },
+      "toggle": {
+        "name": "{instance}"
+      }
+    }
+  },
+  "exceptions": {
+    "invalid_auth": {
+      "message": "API 키가 틀렸거나 폐기됐습니다."
+    },
+    "ip_not_allowed": {
+      "message": "이 IP가 애플리케이션 허용 IP 목록에 없습니다. 파트너스 포털에서 허용 IP를 확인하세요."
+    },
+    "organization_inactive": {
+      "message": "조직이 아직 승인되지 않았거나 비활성 상태입니다."
+    },
+    "rate_limited": {
+      "message": "헤이홈 Open API 호출 한도에 걸렸습니다. {seconds}초 뒤 다시 시도합니다."
+    },
+    "update_failed": {
+      "message": "기기 상태를 받지 못했습니다: {error}"
+    },
+    "invalid_request": {
+      "message": "기기가 요청을 거절했습니다: {error}"
+    },
+    "device_offline": {
+      "message": "기기가 오프라인입니다."
+    },
+    "device_not_ready": {
+      "message": "기기가 아직 준비되지 않았습니다({error}). 잠시 뒤 다시 시도하세요."
+    },
+    "control_failed": {
+      "message": "기기를 제어하지 못했습니다: {error}"
+    }
+  },
+  "issues": {
+    "rate_limited": {
+      "title": "헤이홈 Open API 호출 한도에 자주 걸림",
+      "description": "{title}이(가) 지난 1시간 동안 호출 한도에 여러 번 걸렸습니다. 통합 옵션에서 상태 조회 간격을 늘리세요."
+    },
+    "ip_not_allowed": {
+      "title": "헤이홈 Open API: 허용되지 않은 IP",
+      "description": "{title}의 요청이 거절되고 있습니다. Home Assistant의 공인 IP가 애플리케이션 허용 IP 목록에 없습니다(공인 IP가 바뀌었을 수 있음). 파트너스 포털(https://partners.goqual.com)에서 허용 IP를 고치세요."
+    },
+    "organization_inactive": {
+      "title": "헤이홈 Open API: 조직 비활성",
+      "description": "{title}의 요청이 거절되고 있습니다. 조직이 승인되지 않았거나 비활성 상태입니다. 파트너스 포털을 확인하세요."
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "device-1": {
+    "deviceId": "device-1",
+    "capabilities": [
+      {
+        "type": "motionSensor",
+        "access": "READ"
+      },
+      {
+        "type": "battery",
+        "access": "READ",
+        "range": {
+          "min": 0.0,
+          "max": 100.0,
+          "unit": "PERCENT"
+        }
+      },
+      {
+        "type": "onlineStatus",
+        "access": "READ"
+      }
+    ]
+  },
+  "device-2": {
+    "deviceId": "device-2",
+    "capabilities": [
+      {
+        "type": "temperatureSensor",
+        "access": "READ",
+        "range": {
+          "min": -20.0,
+          "max": 100.0,
+          "unit": "CELSIUS"
+        }
+      },
+      {
+        "type": "humiditySensor",
+        "access": "READ",
+        "range": {
+          "min": 0.0,
+          "max": 100.0,
+          "unit": "PERCENT"
+        }
+      },
+      {
+        "type": "battery",
+        "access": "READ",
+        "range": {
+          "min": 0.0,
+          "max": 100.0,
+          "unit": "PERCENT"
+        }
+      },
+      {
+        "type": "onlineStatus",
+        "access": "READ"
+      }
+    ]
+  },
+  "device-3": {
+    "deviceId": "device-3",
+    "capabilities": [
+      {
+        "type": "onOff",
+        "access": "READ_WRITE",
+        "writableFields": [
+          "on"
+        ]
+      },
+      {
+        "type": "brightness",
+        "access": "READ_WRITE",
+        "writableFields": [
+          "percent"
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 100.0,
+          "unit": "PERCENT"
+        }
+      },
+      {
+        "type": "colorSetting",
+        "access": "READ_WRITE",
+        "writableFields": [
+          "hsv"
+        ],
+        "fieldRanges": {
+          "hsv.hue": {
+            "min": 0.0,
+            "max": 360.0
+          },
+          "hsv.saturation": {
+            "min": 0.0,
+            "max": 100.0,
+            "unit": "PERCENT"
+          },
+          "hsv.value": {
+            "min": 0.0,
+            "max": 100.0,
+            "unit": "PERCENT"
+          }
+        }
+      },
+      {
+        "type": "colorTemperature",
+        "access": "READ_WRITE",
+        "writableFields": [
+          "kelvin"
+        ],
+        "range": {
+          "min": 3000.0,
+          "max": 9000.0,
+          "unit": "KELVIN"
+        }
+      },
+      {
+        "type": "mode",
+        "access": "READ_WRITE",
+        "instance": "run_mode",
+        "writableFields": [
+          "current"
+        ],
+        "values": [
+          "white",
+          "color",
+          "scene",
+          "music"
+        ]
+      },
+      {
+        "type": "startUpLight",
+        "access": "READ_WRITE",
+        "writableFields": [
+          "behavior",
+          "light"
+        ],
+        "fieldRanges": {
+          "light.hsv.saturation": {
+            "min": 0.0,
+            "max": 100.0
+          },
+          "light.hsv.value": {
+            "min": 0.0,
+            "max": 100.0
+          },
+          "light.brightnessPercent": {
+            "min": 0.0,
+            "max": 100.0
+          },
+          "light.kelvin": {
+            "min": 3000.0,
+            "max": 9000.0
+          }
+        }
+      },
+      {
+        "type": "onOffTransition",
+        "access": "READ",
+        "fieldRanges": {
+          "onSeconds": {
+            "min": 0.0,
+            "max": 60.0
+          },
+          "offSeconds": {
+            "min": 0.0,
+            "max": 60.0
+          }
+        }
+      },
+      {
+        "type": "onlineStatus",
+        "access": "READ"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "domain": "hejhome_openapi",
+  "name": "Hejhome Open API",
+  "codeowners": ["@jongho"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/jongho/ha-hejhome-openapi",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/jongho/ha-hejhome-openapi/issues",
+  "loggers": ["custom_components.hejhome_openapi"],
+  "requirements": [],
+  "version": "0.1.0"
+}
