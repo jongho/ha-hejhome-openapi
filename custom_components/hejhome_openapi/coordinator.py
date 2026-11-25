@@ -47,6 +47,7 @@ from .const import (
     MAX_SILENT_POLL_FAILURES,
     MIN_SCAN_INTERVAL,
     OPTIMISTIC_TIMEOUT,
+    PORTAL_URL,
     REFRESH_AFTER_CONTROL,
 )
 
@@ -305,7 +306,7 @@ class HejhomeCoordinator(DataUpdateCoordinator[dict[str, DeviceState]]):
                 is_fixable=False,
                 severity=ir.IssueSeverity.ERROR,
                 translation_key=key,
-                translation_placeholders={"title": self.config_entry.title},
+                translation_placeholders={"title": self.config_entry.title, "portal_url": PORTAL_URL},
             )
             return ConfigEntryAuthFailed(translation_domain=DOMAIN, translation_key=key)
         return UpdateFailed(

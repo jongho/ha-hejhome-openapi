@@ -36,3 +36,4 @@ OPTIMISTIC_TIMEOUT: Final = timedelta(seconds=10)
 
 # 플러그·멀티탭 이름으로 switch device_class를 outlet으로 (모델명이 API에 없다)
 OUTLET_NAME_HINTS: Final = ("플러그", "멀티탭", "plug", "outlet", "power strip")
+PORTAL_URL = "https://partners.goqual.com"  # 수리 알림 문구에 자리 표시자로 넣는다
