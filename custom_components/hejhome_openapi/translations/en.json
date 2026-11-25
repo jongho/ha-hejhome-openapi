@@ -143,7 +143,7 @@
     },
     "ip_not_allowed": {
       "title": "Hejhome Open API: IP not allowed",
-      "description": "Requests for {title} are rejected because Home Assistant's public IP is not in the application's allowed IP list. Your public IP may have changed. Update the allowed IPs in the partners portal (https://partners.goqual.com)."
+      "description": "Requests for {title} are rejected because Home Assistant's public IP is not in the application's allowed IP list. Your public IP may have changed. Update the allowed IPs in the partners portal ({portal_url})."
     },
     "organization_inactive": {
       "title": "Hejhome Open API: organization inactive",

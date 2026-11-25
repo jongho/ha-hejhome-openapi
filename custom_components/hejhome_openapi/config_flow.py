@@ -50,6 +50,7 @@ from .const import (
     MAX_SCAN_INTERVAL,
     MIN_REFRESH_HOURS,
     MIN_SCAN_INTERVAL,
+    PORTAL_URL,
 )
 
 _LOGGER = logging.getLogger(__name__)
@@ -126,7 +127,7 @@ class HejhomeConfigFlow(ConfigFlow, domain=DOMAIN):
             step_id="user",
             data_schema=KEY_SCHEMA,
             errors=errors,
-            description_placeholders={"portal_url": "https://partners.goqual.com"},
+            description_placeholders={"portal_url": PORTAL_URL},
         )
 
     async def async_step_space(self, user_input: dict[str, Any] | None = None) -> ConfigFlowResult:
@@ -192,7 +193,7 @@ class HejhomeConfigFlow(ConfigFlow, domain=DOMAIN):
             step_id=step_id,
             data_schema=KEY_SCHEMA,
             errors=errors,
-            description_placeholders={"title": entry.title, "portal_url": "https://partners.goqual.com"},
+            description_placeholders={"title": entry.title, "portal_url": PORTAL_URL},
         )
 
     @staticmethod

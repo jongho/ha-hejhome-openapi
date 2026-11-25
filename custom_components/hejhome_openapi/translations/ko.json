@@ -143,7 +143,7 @@
     },
     "ip_not_allowed": {
       "title": "헤이홈 Open API: 허용되지 않은 IP",
-      "description": "{title}의 요청이 거절되고 있습니다. Home Assistant의 공인 IP가 애플리케이션 허용 IP 목록에 없습니다(공인 IP가 바뀌었을 수 있음). 파트너스 포털(https://partners.goqual.com)에서 허용 IP를 고치세요."
+      "description": "{title}의 요청이 거절되고 있습니다. Home Assistant의 공인 IP가 애플리케이션 허용 IP 목록에 없습니다(공인 IP가 바뀌었을 수 있음). 파트너스 포털({portal_url})에서 허용 IP를 고치세요."
     },
     "organization_inactive": {
       "title": "헤이홈 Open API: 조직 비활성",
