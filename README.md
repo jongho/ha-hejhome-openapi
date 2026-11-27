@@ -1,5 +1,7 @@
 # Hejhome Open API for Home Assistant
 
+[![HACS Default](https://img.shields.io/badge/HACS-Default-41BDF5.svg)](https://hacs.xyz)
+
 > **비공식 HA 통합입니다.** 헤이홈(Hejhome) 및 고퀄(GOQUAL)과 관계가 없으며, 공식 지원을 받지 않습니다.
 > Unofficial — not affiliated with or endorsed by Hejhome / GOQUAL.
 
@@ -36,9 +38,10 @@ API 키는 헤이홈 파트너스 포털에서 무료로 받습니다. 한 사�
 
 ## 설치 (HACS)
 
-1. HACS → 오른쪽 위 메뉴 → **사용자 지정 저장소**에 이 저장소 주소를 넣고, 유형을 **통합**으로 골라 추가합니다.
-2. "Hejhome Open API (Unofficial)"를 내려받고 Home Assistant를 재시작합니다.
-3. **설정 → 기기 및 서비스 → 통합 추가**에서 "Hejhome Open API (Unofficial)"를 고르고 API 키를 넣습니다. 집이 여러 곳이면 연결할 집을 고릅니다.
+1. HACS에서 "Hejhome Open API (Unofficial)"를 검색해 내려받고 Home Assistant를 재시작합니다.
+2. **설정 → 기기 및 서비스 → 통합 추가**에서 "Hejhome Open API (Unofficial)"를 고르고 API 키를 넣습니다. 집이 여러 곳이면 연결할 집을 고릅니다.
+
+검색해도 나오지 않으면 HACS → 오른쪽 위 메뉴 → **사용자 지정 저장소**에 이 저장소 주소를 넣고, 유형을 **통합**으로 골라 추가한 뒤 1단계부터 하면 됩니다.
 
 HACS 없이 설치하려면 `custom_components/hejhome_openapi/` 폴더를 HA의 `/config/custom_components/`에 복사하고 재시작합니다.
 
